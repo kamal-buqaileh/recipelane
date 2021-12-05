@@ -7,7 +7,7 @@ if [ -n "$TMUX" ]; then
   export TMUX=''
 fi
 
-if [ ! $RECIPE_DIR ]; then export RECIPE_DIR=$HOME/workspace/recipey_lane; fi
+if [ ! $RECIPE_DIR ]; then export RECIPE_DIR=$HOME/workspace/recipelane; fi
 
 cd $RECIPE_DIR
 
