@@ -1,0 +1,40 @@
+Author name:     <%=@recipe.author.name%>
+<br>
+<br>
+Name:            <%=@recipe.name%>
+<br>
+<br>
+author_tip:      <%=@recipe.author_tip%>
+<br>
+<br>
+budget:          <%=@recipe.budget%>
+<br>
+<br>
+cook_time:       <%=@recipe.cook_time%>
+<br>
+<br>
+prep_time:       <%=@recipe.prep_time%>
+<br>
+<br>
+total_time:      <%=@recipe.total_time%>
+<br>
+<br>
+difficulty:      <%=@recipe.difficulty%>
+<br>
+<br>
+ingredients:     <%=@recipe.ingredients.join(', ')%>
+<br>
+<br>
+tags:            <%=@recipe.tags.join(', ')%>
+<br>
+<br>
+nb_comments:     <%=@recipe.nb_comments%>
+<br>
+<br>
+people_quantity: <%=@recipe.people_quantity%>
+<br>
+<br>
+rate:            <%=@recipe.rate%>
+<br>
+<br>
+image:           <%= image_tag(@recipe.image)%>
