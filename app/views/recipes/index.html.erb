@@ -26,7 +26,7 @@
 
     </thead>
     <tbody>
-      <%@recipes.pluck('authors.name', :name, :ingredients, :difficulty, :prep_time, :cook_time, :total_time, :id).each do |recipe|%>
+      <%@recipes.pluck(:author, :name, :ingredients, :difficulty, :prep_time, :cook_time, :total_time, :id).each do |recipe|%>
         <tr>
           <td> <%=recipe[0]%> </td>
           <td> <%=recipe[1]%> </td>

@@ -15,12 +15,6 @@ ActiveRecord::Schema.define(version: 2021_12_04_182520) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "authors", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.string "author_tip"
@@ -30,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_12_04_182520) do
     t.string "total_time"
     t.string "difficulty"
     t.string "image"
+    t.string "author"
     t.text "ingredients", default: [], array: true
     t.text "tags", default: [], array: true
     t.integer "nb_comments"
@@ -37,8 +32,6 @@ ActiveRecord::Schema.define(version: 2021_12_04_182520) do
     t.float "rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "author_id"
-    t.index ["author_id"], name: "index_recipes_on_author_id"
     t.index ["ingredients"], name: "index_recipes_on_ingredients"
     t.index ["name"], name: "index_recipes_on_name"
   end

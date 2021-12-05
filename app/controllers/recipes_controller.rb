@@ -9,6 +9,6 @@ class RecipesController < ApplicationController
       args = params[:recipe][:full_ingredients].split(', ')
       @recipes = Recipe.where('ingredients @> ARRAY[?]::Text[]', args)
     end
-    @recipes = @recipes.joins(:author).page params[:page]
+    @recipes = @recipes.page params[:page]
   end
 end
