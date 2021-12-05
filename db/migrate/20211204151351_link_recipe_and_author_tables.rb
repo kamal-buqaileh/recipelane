@@ -5,7 +5,10 @@ class LinkRecipeAndAuthorTables < ActiveRecord::Migration[6.1]
     data.each do |author_name, recipes|
       author = Author.create(name: author_name)
 
-      recipes.map{ |recipe| recipe.update(author_id: author.id) }
+      recipes.each do |recipe|
+        recipe.author_id = author.id
+        recipe.save!
+      end
     end
   end
 
