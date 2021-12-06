@@ -30,4 +30,4 @@ you can create another `admin` user:
 
 * Database
 
-very simple and stright forward, just one table called `recipe`
+very simple and stright forward, just two tables called `recipes` and `users`
