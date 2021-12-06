@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get 'sign_in', to: 'devise/sessions#new'
+    get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
   root to: 'recipes#index'
