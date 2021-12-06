@@ -5,20 +5,29 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: `3.0.3`
+* Rails Version: `6.1`
 
-* System dependencies
+* Installation:
 
-* Configuration
+  1- clone the app
+  
+  2- make sure you have the right ruby version 
+  
+  3- run `bundle install`
+  
+  4- run `rails db:migrate`
+  
+  5- run `rails s` to start the server
+  
+* Usage
 
-* Database creation
+you need to create a user using `rails c` for example:
+`User.create(email: 'user@recipelane.com', password: '123123123')`
 
-* Database initialization
+you can create another `admin` user:
+`User.create(email: 'admin@recipelane.com', password: '123123123', role: 'admin')` to access `rails_admin`
 
-* How to run the test suite
+* Database
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+very simple and stright forward, just two tables called `recipes` and `users`
