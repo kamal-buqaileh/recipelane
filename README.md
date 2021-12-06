@@ -31,3 +31,4 @@ you can create another `admin` user:
 * Database
 
 very simple and stright forward, just two tables called `recipes` and `users`
+https://user-images.githubusercontent.com/52836863/144832660-28c07616-1129-4e32-92ac-b14cc441edab.mp4
