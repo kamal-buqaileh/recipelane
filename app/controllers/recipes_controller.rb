@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
   def index
     if params[:recipe].present? && params[:recipe][:any_ingredients].present?
       args = params[:recipe][:any_ingredients]
+      args.gsub!("'", "''")
       @recipes = Recipe.where("array_to_string(ingredients, ', ') like '%#{args}%'")
     elsif params[:recipe].present? && params[:recipe][:full_ingredients].present?
       args = params[:recipe][:full_ingredients].split(', ')
